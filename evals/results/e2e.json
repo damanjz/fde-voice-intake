@@ -1,0 +1,1221 @@
+{
+ "date": "2026-11-10T14:45:50",
+ "agent_url": "http://localhost:8000",
+ "stt_language": "en",
+ "precondition": "Return clips match P1's order data (delivered within 30 days, item present): LC-1137 (voice-cancel, clip S14), LC-1154 (voice-unclear, clip S37), LC-1155 (clip S15, pending only), LC-1161 (voice-confirm, clip S16). P1's returns table has no open return for any of them. voice-confirm creates one return for LC-1161, so a second run needs that return removed or another matching order.",
+ "rows": [
+  {
+   "id": "S01",
+   "source": "synthetic",
+   "group": "confusable",
+   "expected_tool": "lookup_order",
+   "expected_order_id": "LC-1150",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1150"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 11788
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1150"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "Where is my order LC-1150?",
+    "timings": {
+     "stt_ms": 1442,
+     "agent_ms": 13384,
+     "tts_ms": 515,
+     "total_ms": 15344
+    },
+    "session_id": "voice-eval-S01-514674",
+    "text": "Your order LC-1150 was delivered on 29 October 2026 via BlueDart (tracking BD976998119). It contained Paper Filters V60 (100 pack) and a Variable Temperature Kettle Pro, totalling INR 7,848. If you didn't receive it or have an issue, let me know and I can help with the next steps."
+   }
+  },
+  {
+   "id": "S02",
+   "source": "synthetic",
+   "group": "confusable",
+   "expected_tool": "lookup_order",
+   "expected_order_id": "LC-1015",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1015"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 12229
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1015"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "Where is my order LC-1015?",
+    "timings": {
+     "stt_ms": 1291,
+     "agent_ms": 11709,
+     "tts_ms": 446,
+     "total_ms": 13449
+    },
+    "session_id": "voice-eval-S02-514701",
+    "text": "Your order LC-1015 was delivered on 28 July 2026 via BlueDart (tracking BD855689832). It contained Decaf Swiss Water 250g and 3x Cold Brew Blend 500g, totalling INR 3,296. If you didn't receive it or need anything else, let me know."
+   }
+  },
+  {
+   "id": "S03",
+   "source": "synthetic",
+   "group": "confusable",
+   "expected_tool": "lookup_order",
+   "expected_order_id": "LC-1150",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1150"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 17533
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1150"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "Can you check LC-1150 for me please?",
+    "timings": {
+     "stt_ms": 1338,
+     "agent_ms": 13468,
+     "tts_ms": 483,
+     "total_ms": 15294
+    },
+    "session_id": "voice-eval-S03-514726",
+    "text": "Order LC-1150 was delivered on 29 October via BlueDart (tracking BD976998119). It contained a Paper Filters V60 (100 pack) and a Variable Temperature Kettle Pro, totalling INR 7,848. The return window is still open and ends on 28 November. Would you like me to help with anything specific about this "
+   }
+  },
+  {
+   "id": "S04",
+   "source": "synthetic",
+   "group": "confusable",
+   "expected_tool": "lookup_order",
+   "expected_order_id": "LC-1050",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1050"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 12462
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1050"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "What is the status of LC-1050?",
+    "timings": {
+     "stt_ms": 1289,
+     "agent_ms": 14700,
+     "tts_ms": 379,
+     "total_ms": 16370
+    },
+    "session_id": "voice-eval-S04-514759",
+    "text": "Your order LC-1050 is delivered. It was handed over by DTDC on 2026-09-09, with tracking number DT12417264. The order contained 2 x Variable Temperature Kettle 0.8L for a total of ₹11,998."
+   }
+  },
+  {
+   "id": "S05",
+   "source": "synthetic",
+   "group": "confusable",
+   "expected_tool": "lookup_order",
+   "expected_order_id": "LC-1115",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1115"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 11518
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1115"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "Has LC-1115 been shipped yet?",
+    "timings": {
+     "stt_ms": 1283,
+     "agent_ms": 18372,
+     "tts_ms": 246,
+     "total_ms": 19903
+    },
+    "session_id": "voice-eval-S05-514788",
+    "text": "Yes, LC-1115 was shipped on 5 October 2026 via Delhivery (tracking DL6783184531) and was delivered on 7 October 2026."
+   }
+  },
+  {
+   "id": "S06",
+   "source": "synthetic",
+   "group": "confusable",
+   "expected_tool": "lookup_order",
+   "expected_order_id": "LC-1015",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order",
+     "create_ticket"
+    ],
+    "order_ids": [
+     "LC-1015"
+    ],
+    "pending": true,
+    "escalated": true,
+    "handoff_only": false,
+    "agent_ms": 18220
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1015"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "I placed order LC-1015 last week and nothing has come.",
+    "timings": {
+     "stt_ms": 1436,
+     "agent_ms": 18351,
+     "tts_ms": 479,
+     "total_ms": 20270
+    },
+    "session_id": "voice-eval-S06-514820",
+    "text": "Your order LC-1015 shows as delivered on 28 July via BlueDart (tracking BD855689832). Since it was marked delivered over a month ago, the 30-day return window has already closed. If you didn't actually receive it, contact us within 48 hours of the delivery scan so we can open an investigation [KB-00"
+   }
+  },
+  {
+   "id": "S07",
+   "source": "synthetic",
+   "group": "order",
+   "expected_tool": "lookup_order",
+   "expected_order_id": "LC-1167",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1167"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 12054
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1167"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "Please track LC-1167.",
+    "timings": {
+     "stt_ms": 1175,
+     "agent_ms": 12961,
+     "tts_ms": 377,
+     "total_ms": 14518
+    },
+    "session_id": "voice-eval-S07-514858",
+    "text": "Your order LC-1167 was delivered on 2 November 2026 via BlueDart (tracking BD328326697). It contained the Hand Burr Grinder Compact and the Variable Temperature Kettle Pro. If you need to check the carrier's own tracking page, you can paste that tracking number there [KB-002]."
+   }
+  },
+  {
+   "id": "S08",
+   "source": "synthetic",
+   "group": "order",
+   "expected_tool": "lookup_order",
+   "expected_order_id": "LC-1001",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1001"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 11799
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1001"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "Order LC-1001, when will it be delivered?",
+    "timings": {
+     "stt_ms": 1387,
+     "agent_ms": 10986,
+     "tts_ms": 299,
+     "total_ms": 12675
+    },
+    "session_id": "voice-eval-S08-514885",
+    "text": "Your order LC-1001 has already been delivered on 2026-06-08 via DTDC (tracking DT05218549). If you haven't received the parcel, please let me know and I can help look into it."
+   }
+  },
+  {
+   "id": "S09",
+   "source": "synthetic",
+   "group": "order",
+   "expected_tool": "lookup_order",
+   "expected_order_id": "LC-1125",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1125"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 12174
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1125"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "My order number is LC-1125.",
+    "timings": {
+     "stt_ms": 1307,
+     "agent_ms": 13505,
+     "tts_ms": 498,
+     "total_ms": 15315
+    },
+    "session_id": "voice-eval-S09-514909",
+    "text": "Your order LC-1125 was delivered on 12 October 2026 via BlueDart (tracking BD412943214). It contained a Glass Pour-Over Set and an Electric Gooseneck Kettle 0.9L, totalling INR 6,298. Your 30-day return window is still open and closes on 11 November 2026. How can I help with this order?"
+   }
+  },
+  {
+   "id": "S10",
+   "source": "synthetic",
+   "group": "order",
+   "expected_tool": "lookup_order",
+   "expected_order_id": "LC-1200",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1200"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 11595
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1200"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "LC-1200, where is the parcel?",
+    "timings": {
+     "stt_ms": 1287,
+     "agent_ms": 10860,
+     "tts_ms": 317,
+     "total_ms": 12467
+    },
+    "session_id": "voice-eval-S10-514937",
+    "text": "Your order LC-1200 is still in \"placed\" status and has not been dispatched yet, so there is no tracking number at this point. Orders are typically dispatched within 1 business day, so it should ship soon. Once it ships, you'll receive tracking details."
+   }
+  },
+  {
+   "id": "S11",
+   "source": "synthetic",
+   "group": "noisy",
+   "expected_tool": "lookup_order",
+   "expected_order_id": "LC-1107",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1107"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 14110
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1107"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "Please look up LC-1107.",
+    "timings": {
+     "stt_ms": 1220,
+     "agent_ms": 13693,
+     "tts_ms": 847,
+     "total_ms": 15767
+    },
+    "session_id": "voice-eval-S11-514961",
+    "text": "Order LC-1107 was delivered on 2026-10-08 via BlueDart (tracking BD634546268). It contained:\n\n- Citric Acid Descaler 200g (AC-004) × 1 — ₹249\n- Cold Brew Blend 500g (BN-011) × 3 — ₹849 each\n- Larkfield Hand Burr Grinder Pro (GR-002) × 2 — ₹3,999 each\n\nTotal: ₹10,794. The order is marked delivered.\n\n"
+   }
+  },
+  {
+   "id": "S12",
+   "source": "synthetic",
+   "group": "noisy",
+   "expected_tool": "lookup_order",
+   "expected_order_id": "LC-1109",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1109"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 12135
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1109"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "Is Order LC-1109 delivered?",
+    "timings": {
+     "stt_ms": 1306,
+     "agent_ms": 11320,
+     "tts_ms": 372,
+     "total_ms": 13000
+    },
+    "session_id": "voice-eval-S12-514991",
+    "text": "Yes, order LC-1109 was delivered on 7 October 2026 via DTDC (tracking DT60237296). It contained House Blend 250g and 2 Variable Temperature Kettle Pro units, totalling INR 15,497."
+   }
+  },
+  {
+   "id": "S13",
+   "source": "synthetic",
+   "group": "noisy",
+   "expected_tool": "lookup_order",
+   "expected_order_id": "LC-1188",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1188"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 12359
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order"
+    ],
+    "order_ids": [
+     "LC-1188"
+    ],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "Order LC-1188 has not arrived.",
+    "timings": {
+     "stt_ms": 1322,
+     "agent_ms": 12929,
+     "tts_ms": 515,
+     "total_ms": 14769
+    },
+    "session_id": "voice-eval-S13-515016",
+    "text": "Your order LC-1188 is shipped with DTDC (tracking DT08620234) and was dispatched on Friday 6 Nov. Standard delivery is 3 to 6 business days from dispatch [KB-001], so it is due by Friday 13 Nov and is not late yet. You can track it with the number above or paste it on DTDC's website [KB-002]. If the"
+   }
+  },
+  {
+   "id": "S14",
+   "source": "synthetic",
+   "group": "return",
+   "expected_tool": "start_return",
+   "expected_order_id": "LC-1137",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order",
+     "start_return"
+    ],
+    "order_ids": [
+     "LC-1137"
+    ],
+    "pending": true,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 17272
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order",
+     "start_return"
+    ],
+    "order_ids": [
+     "LC-1137"
+    ],
+    "pending": true,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "I want to return the kettle from Order LC-1137, it stopped heating.",
+    "timings": {
+     "stt_ms": 1440,
+     "agent_ms": 15946,
+     "tts_ms": 281,
+     "total_ms": 17668
+    },
+    "session_id": "voice-eval-S14-515043",
+    "text": "I can start a return for order LC-1137 (1 x KT-004); reason: Kettle stopped heating. Estimated refund: INR 7,499 (pickup is free). Please confirm to go ahead, or cancel."
+   }
+  },
+  {
+   "id": "S15",
+   "source": "synthetic",
+   "group": "return",
+   "expected_tool": "start_return",
+   "expected_order_id": "LC-1155",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order",
+     "start_return"
+    ],
+    "order_ids": [
+     "LC-1155"
+    ],
+    "pending": true,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 16721
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order",
+     "start_return"
+    ],
+    "order_ids": [
+     "LC-1155"
+    ],
+    "pending": true,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "The coffee beans from order LC-1155 arrive damaged. I want to return them.",
+    "timings": {
+     "stt_ms": 1480,
+     "agent_ms": 13263,
+     "tts_ms": 259,
+     "total_ms": 15004
+    },
+    "session_id": "voice-eval-S15-515078",
+    "text": "I'm sorry the beans arrived damaged. Your order LC-1155 for Ethiopia Yirgacheffe 250g was delivered on 31 Oct, so you're within the 30-day return window [KB-007]. Damaged items qualify for a free return with no pickup fee [KB-011].\n\nI'll start the return for you now.\n\nI can start a return for order "
+   }
+  },
+  {
+   "id": "S16",
+   "source": "synthetic",
+   "group": "return",
+   "expected_tool": "start_return",
+   "expected_order_id": "LC-1161",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order",
+     "start_return"
+    ],
+    "order_ids": [
+     "LC-1161"
+    ],
+    "pending": true,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 14802
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order",
+     "start_return"
+    ],
+    "order_ids": [
+     "LC-1161"
+    ],
+    "pending": true,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "Please start a return for order LC-1161. The Moka Pot is leaking.",
+    "timings": {
+     "stt_ms": 1438,
+     "agent_ms": 14164,
+     "tts_ms": 283,
+     "total_ms": 15887
+    },
+    "session_id": "voice-eval-S16-515110",
+    "text": "Your order LC-1161 for the Moka Pot 3-Cup was delivered on 2026-10-30, so it is within the 30-day return window [KB-007]. Since the pot is leaking, that counts as a defect and qualifies for a free return pickup [KB-007].\n\nI'll start the return for the Moka Pot 3-Cup (SKU BR-006) with the reason \"lea"
+   }
+  },
+  {
+   "id": "S37",
+   "source": "synthetic",
+   "group": "return",
+   "expected_tool": "start_return",
+   "expected_order_id": "LC-1154",
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order",
+     "start_return"
+    ],
+    "order_ids": [
+     "LC-1154"
+    ],
+    "pending": true,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 16720
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "lookup_order",
+     "start_return"
+    ],
+    "order_ids": [
+     "LC-1154"
+    ],
+    "pending": true,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "I want to return the Grinder from Order LC-1154, I changed my mind.",
+    "timings": {
+     "stt_ms": 1568,
+     "agent_ms": 16433,
+     "tts_ms": 307,
+     "total_ms": 18311
+    },
+    "session_id": "voice-eval-S37-515140",
+    "text": "I can start a return for order LC-1154 (1 x GR-004); reason: Changed my mind. Estimated refund: INR 8,900 (after the INR 99 reverse pickup fee). Please confirm to go ahead, or cancel."
+   }
+  },
+  {
+   "id": "S17",
+   "source": "synthetic",
+   "group": "stock",
+   "expected_tool": "check_stock",
+   "expected_order_id": null,
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "check_stock"
+    ],
+    "order_ids": [],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 12177
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "check_stock"
+    ],
+    "order_ids": [],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "Do you have the Larkfield Hand Burr Grinder Pro in stock?",
+    "timings": {
+     "stt_ms": 1426,
+     "agent_ms": 10563,
+     "tts_ms": 205,
+     "total_ms": 12196
+    },
+    "session_id": "voice-eval-S17-515175",
+    "text": "Yes, the Larkfield Hand Burr Grinder Pro is in stock — 35 units available at ₹3,999. It carries a 24-month warranty [KB-014]."
+   }
+  },
+  {
+   "id": "S18",
+   "source": "synthetic",
+   "group": "stock",
+   "expected_tool": "check_stock",
+   "expected_order_id": null,
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "check_stock"
+    ],
+    "order_ids": [],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 11702
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "check_stock"
+    ],
+    "order_ids": [],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "Is the Espresso Grinder 64mm available?",
+    "timings": {
+     "stt_ms": 1433,
+     "agent_ms": 10967,
+     "tts_ms": 305,
+     "total_ms": 12708
+    },
+    "session_id": "voice-eval-S18-515200",
+    "text": "The Larkfield Espresso Grinder 64mm (GR-006) is currently out of stock. It's priced at INR 12,999 and carries a 24-month warranty. Would you like me to check for similar grinders that are in stock?"
+   }
+  },
+  {
+   "id": "S19",
+   "source": "synthetic",
+   "group": "answer",
+   "expected_tool": null,
+   "expected_order_id": null,
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [],
+    "order_ids": [],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 9089
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [],
+    "order_ids": [],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "How long does shipping take to Hyderabad?",
+    "timings": {
+     "stt_ms": 1336,
+     "agent_ms": 7533,
+     "tts_ms": 193,
+     "total_ms": 9065
+    },
+    "session_id": "voice-eval-S19-515224",
+    "text": "To Hyderabad, standard delivery takes 3 to 6 business days from dispatch [KB-001]. Express delivery is available in Hyderabad and takes 1 to 2 business days [KB-001]."
+   }
+  },
+  {
+   "id": "S20",
+   "source": "synthetic",
+   "group": "answer",
+   "expected_tool": null,
+   "expected_order_id": null,
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [],
+    "order_ids": [],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 9733
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [],
+    "order_ids": [],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "What is your return policy for coffee beans?",
+    "timings": {
+     "stt_ms": 1283,
+     "agent_ms": 9034,
+     "tts_ms": 512,
+     "total_ms": 10834
+    },
+    "session_id": "voice-eval-S20-515242",
+    "text": "For coffee beans, sealed unopened bags can be returned within 30 days of delivery [KB-007]. Opened bags can only be returned if they're defective or damaged — for example, if the beans are stale compared to the roast date, the wrong roast was sent, the bag arrived torn, or there's foreign matter in "
+   }
+  },
+  {
+   "id": "S21",
+   "source": "synthetic",
+   "group": "answer",
+   "expected_tool": null,
+   "expected_order_id": null,
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [],
+    "order_ids": [],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 7994
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [],
+    "order_ids": [],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "How long is the warranty on the Electric Burr Grinder?",
+    "timings": {
+     "stt_ms": 1381,
+     "agent_ms": 7369,
+     "tts_ms": 90,
+     "total_ms": 8840
+    },
+    "session_id": "voice-eval-S21-515263",
+    "text": "The Electric Burr Grinder has a 24-month warranty from the delivery date [KB-014]."
+   }
+  },
+  {
+   "id": "S22",
+   "source": "synthetic",
+   "group": "answer",
+   "expected_tool": null,
+   "expected_order_id": null,
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [],
+    "order_ids": [],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "agent_ms": 10332
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [],
+    "order_ids": [],
+    "pending": false,
+    "escalated": false,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "How do I cancel my coffee subscription?",
+    "timings": {
+     "stt_ms": 1282,
+     "agent_ms": 8891,
+     "tts_ms": 440,
+     "total_ms": 10616
+    },
+    "session_id": "voice-eval-S22-515280",
+    "text": "You can cancel your subscription at any time from My Subscriptions — there's no minimum commitment or cancellation fee [KB-025]. If you've already been charged for the current delivery (charged 48 hours before dispatch), that shipment will still go out, but you won't be charged again [KB-025].\n\nIf y"
+   }
+  },
+  {
+   "id": "S23",
+   "source": "synthetic",
+   "group": "ticket",
+   "expected_tool": "create_ticket",
+   "expected_order_id": null,
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "create_ticket"
+    ],
+    "order_ids": [],
+    "pending": true,
+    "escalated": true,
+    "handoff_only": false,
+    "agent_ms": 9049
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "create_ticket"
+    ],
+    "order_ids": [],
+    "pending": true,
+    "escalated": true,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "I'm very unhappy and I want to speak to a person.",
+    "timings": {
+     "stt_ms": 1338,
+     "agent_ms": 8500,
+     "tts_ms": 229,
+     "total_ms": 10068
+    },
+    "session_id": "voice-eval-S23-515301",
+    "text": "I'm sorry you're unhappy. I'll escalate this to a human agent right now.\n\nI can open a normal-priority support ticket for our team: Customer is unhappy and requested to speak to a person. No order id or issue details provided yet. Please confirm to go ahead, or cancel."
+   }
+  },
+  {
+   "id": "S24",
+   "source": "synthetic",
+   "group": "ticket",
+   "expected_tool": "create_ticket",
+   "expected_order_id": null,
+   "typed": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "create_ticket"
+    ],
+    "order_ids": [],
+    "pending": true,
+    "escalated": true,
+    "handoff_only": false,
+    "agent_ms": 8563
+   },
+   "voiced": {
+    "ok": true,
+    "wrong_order": false,
+    "tools": [
+     "create_ticket"
+    ],
+    "order_ids": [],
+    "pending": true,
+    "escalated": true,
+    "handoff_only": false,
+    "status": "ok",
+    "transcript": "Please raise a ticket, my invoice has the wrong address.",
+    "timings": {
+     "stt_ms": 1370,
+     "agent_ms": 8251,
+     "tts_ms": 208,
+     "total_ms": 9829
+    },
+    "session_id": "voice-eval-S24-515320",
+    "text": "I'll create a support ticket for the incorrect address on your invoice.\n\nI can open a normal-priority support ticket for our team: Customer reports invoice has wrong address. No order id provided. Please confirm to go ahead, or cancel."
+   }
+  }
+ ],
+ "silent": [
+  {
+   "id": "S29",
+   "kind": "silent",
+   "status": "no_speech",
+   "transcript_raw": "",
+   "agent_calls": 0,
+   "ok": true
+  },
+  {
+   "id": "S30",
+   "kind": "noise",
+   "status": "no_speech",
+   "transcript_raw": "",
+   "agent_calls": 0,
+   "ok": true
+  },
+  {
+   "id": "S34",
+   "kind": "nonspeech",
+   "status": "no_speech",
+   "transcript_raw": "",
+   "agent_calls": 0,
+   "ok": true
+  },
+  {
+   "id": "S35",
+   "kind": "nonspeech",
+   "status": "low_confidence",
+   "transcript_raw": "They are worth living up to the number of girls around the world at home.",
+   "agent_calls": 0,
+   "ok": true
+  },
+  {
+   "id": "S36",
+   "kind": "nonspeech",
+   "status": "no_speech",
+   "transcript_raw": "",
+   "agent_calls": 0,
+   "ok": true
+  }
+ ],
+ "scenarios": [
+  {
+   "name": "voice-cancel",
+   "expect": "cancel",
+   "request_clip": "S14",
+   "answer_clip": "S27",
+   "request_transcript": "I want to return the kettle from Order LC-1137, it stopped heating.",
+   "pending_after_request": true,
+   "request_order": "LC-1137",
+   "answer_status": "ok",
+   "answer_transcript": "No, cancel that.",
+   "answer_confidence": {
+    "avg_logprob": -0.254,
+    "no_speech_prob": 0.003,
+    "audio_seconds": 2.09
+   },
+   "pending_after_answer": false,
+   "executed": [],
+   "reply": "Okay, I've cancelled that. Nothing was changed. Is there anything else I can help with?",
+   "ok": true
+  },
+  {
+   "name": "voice-unclear",
+   "expect": "unclear",
+   "request_clip": "S37",
+   "answer_clip": "S31",
+   "request_transcript": "I want to return the Grinder from Order LC-1154, I changed my mind.",
+   "pending_after_request": true,
+   "request_order": "LC-1154",
+   "answer_status": "unclear_answer",
+   "answer_transcript": "Yo, no.",
+   "answer_confidence": {
+    "avg_logprob": -0.763,
+    "no_speech_prob": 0.032,
+    "audio_seconds": 1.59
+   },
+   "pending_after_answer": true,
+   "executed": [],
+   "reply": "Please say yes or no, or press Confirm or Cancel.",
+   "agent_calls_for_answer": 0,
+   "ok": true
+  },
+  {
+   "name": "voice-confirm",
+   "expect": "execute",
+   "request_clip": "S16",
+   "answer_clip": "S25",
+   "request_transcript": "Please start a return for order LC-1161. The Moka Pot is leaking.",
+   "pending_after_request": true,
+   "request_order": "LC-1161",
+   "answer_status": "ok",
+   "answer_transcript": "Yes, please go ahead.",
+   "answer_confidence": {
+    "avg_logprob": -0.3,
+    "no_speech_prob": 0.004,
+    "audio_seconds": 2.38
+   },
+   "pending_after_answer": false,
+   "executed": [
+    "start_return"
+   ],
+   "reply": "Return started (ID 98) for order LC-1161. Please pack the Moka Pot in its original packaging with all accessories. A pickup will be arranged within 2 business days and you'll receive an email with details. The refund of INR 1,199 will be issued to your original payment method after inspection.",
+   "ok": true
+  }
+ ],
+ "summary": {
+  "synthetic": {
+   "n": 25,
+   "typed_ok": 25,
+   "voiced_ok": 25,
+   "id_n": 17,
+   "id_typed_ok": 17,
+   "id_voiced_ok": 17,
+   "ticket_n": 2,
+   "ticket_typed_ok": 2,
+   "ticket_voiced_ok": 2,
+   "handoff_only_typed": 0,
+   "handoff_only_voiced": 0,
+   "wrong_order_voiced": 0,
+   "wrong_order_typed": 0,
+   "agent_ms_voiced": [
+    13384,
+    11709,
+    13468,
+    14700,
+    18372,
+    18351,
+    12961,
+    10986,
+    13505,
+    10860,
+    13693,
+    11320,
+    12929,
+    15946,
+    13263,
+    14164,
+    16433,
+    10563,
+    10967,
+    7533,
+    9034,
+    7369,
+    8891,
+    8500,
+    8251
+   ]
+  }
+ },
+ "elapsed_s": 722
+}

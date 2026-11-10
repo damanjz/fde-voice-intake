@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+httpx
+pydantic
+python-multipart
+faster-whisper
+piper-tts
+pytest
+ruff

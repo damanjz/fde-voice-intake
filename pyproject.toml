@@ -1,0 +1,13 @@
+[project]
+name = "fde-voice-intake"
+version = "0.1.0"
+requires-python = ">=3.13"
+
+[tool.ruff]
+line-length = 110
+target-version = "py313"
+
+[tool.pytest.ini_options]
+markers = [
+  "models: needs the local whisper and piper models",
+]
