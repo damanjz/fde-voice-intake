@@ -1,0 +1,23 @@
+type: trace
+kicker: FDE Portfolio · 06
+title: One spoken return, traced end to end
+lanes:
+  - {id: customer, label: Customer}
+  - {id: stt, label: Transcriber}
+  - {id: voice, label: Voice rules, hot: true}
+  - {id: agent, label: Support agent (P1)}
+  - {id: tts, label: Synthesizer}
+steps:
+  - {from: customer, to: stt, text: "Holds the button: “Please start a return for order L C eleven sixty one, the moka pot is leaking”"}
+  - {from: stt, to: voice, text: "Whisper with the Larkfield prompt; prepare_transcript makes the id LC-1161; confident() passes"}
+  - {from: voice, to: agent, text: "POST /chat, session voice-xxx: start_return for LC-1161, moka pot"}
+  - {from: agent, to: voice, text: "Proposes start_return, nothing written: pending_action returned"}
+  - {from: voice, to: tts, text: "speak_pending: order, item, reason, refund, then “Say yes or no”"}
+  - {from: tts, to: customer, text: "piper speaks it; the Confirm and Cancel card stays up", tone: accent}
+  - {from: customer, to: stt, text: "“Yes, please go ahead.”"}
+  - {from: stt, to: voice, text: "confident again; answer.classify reads a whole-utterance yes"}
+  - {from: voice, to: agent, text: "POST /chat with confirm: true, never as plain text"}
+  - {from: agent, to: voice, text: "start_return executes: return 98 written", tone: muted}
+  - {from: voice, to: tts, text: "make_speakable drops markup and spells out LC-1161"}
+  - {from: tts, to: customer, text: "“Return started”", tone: accent}
+note: "Lanes are components; arrows are calls in order. A yes-like phrase such as “Yeah, no” is not sent; the customer is asked to say yes or no."

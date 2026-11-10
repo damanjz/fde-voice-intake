@@ -1,0 +1,62 @@
+type: flow
+kicker: FDE Portfolio · 06
+title: How a spoken turn reaches the support agent and comes back as speech
+columns:
+  - id: customer
+    tag: Channel
+    title: Customer
+    points:
+      - Browser page, hold to talk
+      - Live transcript, reply text, reply audio
+      - Confirm and Cancel card stays up while an action may wait
+  - id: listen
+    tag: Speech in
+    title: Listen
+    points:
+      - PyAV decodes webm, ogg, wav or mp4 to 16 kHz mono, 60 s cap
+      - faster-whisper small, int8, CPU, with a Larkfield prompt
+      - Fillers dropped, spoken order ids become LC-1150
+  - id: core
+    core:
+      tag: Voice rules
+      title: POST /voice/turn
+      subtitle: Local, CPU only, no agent logic copied
+      children:
+        - id: gate
+          title: Gate
+          points:
+            - No speech or low confidence is never sent
+            - While an action may wait, only a whole-utterance yes or a clear no passes
+            - Unknown pending state counts as pending
+        - id: ask
+          title: Ask project 1
+          style: dark
+          points:
+            - POST /chat with session id voice-xxx
+            - Only confirm true or false is passed for writes
+            - Never retried; a down agent is spoken as such
+  - stack:
+      - id: speak
+        tag: Speech out
+        title: Speak
+        points:
+          - Citations dropped, ids spelled, rupees and dates spoken
+          - Pending action read in full from pending_action
+          - piper en_US-lessac-medium, CPU
+      - id: reply
+        tag: Output
+        title: Reply
+        points:
+          - Wav plus text and per-stage timings
+          - Hand-offs and errors are spoken too
+band:
+  title: No audio store
+  text: Upload dropped after the request · pending state in memory per session
+  right: "Voiced end to end: 25/25 (synthetic)"
+edges:
+  - {from: customer, to: listen}
+  - {from: listen, to: core}
+  - {from: core, to: speak}
+  - {from: speak, to: reply}
+  - {from: core, to: band, dashed: true}
+note: Synthetic clips are piper speech read back by Whisper, a best case. Own voice, end to end, was 7/8.
