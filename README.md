@@ -7,9 +7,9 @@ A voice front end for the Larkfield support agent (project 1), for customers who
 
 | Voiced end to end | Spoken order ids | Quiet clips |
 |---|---|---|
-| **25/25** voiced requests reach the right tool and order id, end to end against the real agent (synthetic clips, run 3; `evals/report.md`) | **17/17** spoken order ids correct after normalisation (synthetic clips; own voice 5/5; `evals/report.md`) | **5/5** quiet clips never reach the agent: silence, noise, laughter, babble, keyboard (synthetic; `evals/report.md`) |
+| **25/25** voiced requests reach the right tool and order id, end to end against the real agent (synthetic clips, run 3; `evals/report.md`) | **17/17** spoken order ids correct after normalisation (synthetic clips; own voice 4/5; `evals/report.md`) | **5/5** quiet clips never reach the agent: silence, noise, laughter, babble, keyboard (synthetic; `evals/report.md`) |
 
-Own voice, end to end: 7/8 (`evals/results/e2e-own-run1.json`). Synthetic clips are piper speech read back by Whisper, a best case; see the caveats below.
+Own voice, end to end: 7/8 spoken, 8/8 typed (`evals/results/e2e-own-run2.json`). Synthetic clips are piper speech read back by Whisper, a best case; see the caveats below.
 
 ## The problem
 
@@ -41,17 +41,17 @@ STT language setting: `en`. Synthetic clips are piper speech read back by Whispe
 | Measure | Synthetic clips (optimistic) | Own voice |
 |---|---|---|
 | Clips | 37 | 10 |
-| WER, Whisper text vs the typed reference (standard normalisation) | 1.3% | 7.7% |
-| WER with ids and numbers collapsed, vs the spoken-form reference (secondary) | 3.2% | 10.3% |
-| Order-id exact match (after normalisation) | 17/17 (100%) | 5/5 (100%) |
-| Order-id exact match, Whisper text alone (before normalisation) | 17/17 (100%) | 5/5 (100%) |
+| WER, Whisper text vs the typed reference (standard normalisation) | 1.3% | 12.1% |
+| WER with ids and numbers collapsed, vs the spoken-form reference (secondary) | 3.2% | 8.8% |
+| Order-id exact match (after normalisation) | 17/17 (100%) | 4/5 (80%) |
+| Order-id exact match, Whisper text alone (before normalisation) | 17/17 (100%) | 4/5 (80%) |
 | Spoken yes/no read correctly, P6 strict reader | 4/4 (100%) | 2/2 (100%) |
 | Spoken yes/no read correctly, P1 `_typed_answer` | 4/4 (100%) | 2/2 (100%) |
 | Hard-negative spoken answers not taken as yes or no, P6 / P1 | 3/3 (100%) / 3/3 (100%) | - / - |
 | Quiet clips (silence, noise, laughter, babble, keyboard) where Whisper returned no text | 4/5 (80%) | - |
 | Quiet clips producing no agent call (no text, or blocked by the confidence rule) | 5/5 (100%) | - |
-| STT latency p50 / p95 (CPU, int8) | 1.4 s / 1.8 s | 1.5 s / 1.7 s |
-| TTS latency p50 / p95 (piper, CPU, 12 sample replies) | 208 ms / 432 ms | same voice |
+| STT latency p50 / p95 (CPU, int8) | 1.6 s / 1.7 s | 1.6 s / 1.6 s |
+| TTS latency p50 / p95 (piper, CPU, 12 sample replies) | 211 ms / 493 ms | same voice |
 | End-to-end tool + order id correct, typed text (ceiling) | 25/25 (100%) | not run |
 | End-to-end tool + order id correct, voiced | 25/25 (100%) | not run |
 | Real create_ticket calls (typed / voiced), of 2 ticket clips | 2 / 2 | not run |
@@ -61,10 +61,10 @@ STT language setting: `en`. Synthetic clips are piper speech read back by Whispe
 | Scenario voice-unclear | pass | not run |
 | Scenario voice-confirm | pass | not run |
 
-`en` against `auto` on the synthetic clips: `en` wins on speed: same accuracy, `auto` is 1150 ms slower at p50. Order-id matches 17 (`en`) vs 17 (`auto`); `auto` chose: en. All synthetic speech is clear English, so this says nothing about real Hinglish speakers. The default stays `en` because Hindi detection can return Devanagari or a translation, which the agent does not read.
+`en` against `auto` on the synthetic clips: `en` wins on speed: same accuracy, `auto` is 1154 ms slower at p50. Order-id matches 17 (`en`) vs 17 (`auto`); `auto` chose: en. All synthetic speech is clear English, so this says nothing about real Hinglish speakers. The default stays `en` because Hindi detection can return Devanagari or a translation, which the agent does not read.
 <!-- numbers:end -->
 
-**Own voice, end to end (2026-11-10, `evals/results/e2e-own-run1.json`, 8 question clips in the author's own voice):** 7/8 voiced and 7/8 typed reached the right tool and order id; order ids 4/4 where scored. The one miss (O04) was bad case data, not speech: order LC-1144 holds only coffee beans, so "return the grinder" correctly started no return, typed or spoken. O04 now points at LC-1153 (a grinder) and needs re-recording. Own-voice WER (7.7%) is mostly the speaker paraphrasing the prompt ("Yeah" for "Yes", dropping "order"), not mishearing; order ids and yes/no were all heard right. Without the Larkfield prompt, Whisper's own text got 0/5 order ids on this voice (17/17 with it): the prompt is what makes ids work. One speaker is not a population; this is a sanity check, not an accuracy claim.
+**Own voice, end to end (`evals/results/e2e-own-run2.json`, 8 question clips in the author's own voice, all re-recorded 2026-11-11):** 7/8 spoken and 8/8 typed reached the right tool and order id. The spoken miss (O03): "LC-1050" was heard as "LC-1011050"; the id check flagged it, no order was looked up for it, and the agent asked the customer to repeat the id. Run 1 (2026-11-10, `e2e-own-run1.json`) was also 7/8; its miss was bad case data (O04 asked to return a grinder from an order holding only beans), so O04 now points at LC-1153, a grinder, and passes. Own-voice WER (12.1%) is mostly the speaker paraphrasing the prompt, not mishearing. Without the Larkfield prompt, Whisper's own text got 0/5 order ids on this voice (4/5 with it, the fifth being the O03 slip): the prompt is what makes ids work. One speaker is not a population; this is a sanity check, not an accuracy claim.
 
 End-to-end run 1 (kept as `evals/results/e2e-run1.json`) failed on mismatched test data, not on code: the return clips named items the orders did not hold, or an order that was not delivered, and project 1 correctly refused them ("there is no kettle in this order"). The clips were fixed before run 2; see the notes in `evals/manifest.json`. Run 2 (`evals/results/e2e-run2.json`, typed 22/25, voiced 23/25, voice cancel passed) exposed a project 1 behaviour: on a clear return request the agent sometimes explained the policy without proposing the return, typed or voiced alike. Project 1 now retries once in that case (its commit 8ae4bb9). Run 3 (`evals/results/e2e-run3.json`, `evals/report-e2e3-2026-11-10.md`): typed 25/25, voiced 25/25, quiet clips 5/5 with no agent call, all three voice scenarios pass.
 

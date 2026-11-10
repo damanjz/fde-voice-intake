@@ -1,6 +1,6 @@
 # Voice intake eval report
 
-STT run 2026-11-10T15:31:05 (273 s). All speech models run on CPU. Fictional customer, synthetic clips.
+STT run 2026-11-11T00:01:25 (276 s). All speech models run on CPU. Fictional customer, synthetic clips.
 
 ## Numbers
 
@@ -9,17 +9,17 @@ STT language setting: `en`. Synthetic clips are piper speech read back by Whispe
 | Measure | Synthetic clips (optimistic) | Own voice |
 |---|---|---|
 | Clips | 37 | 10 |
-| WER, Whisper text vs the typed reference (standard normalisation) | 1.3% | 7.7% |
-| WER with ids and numbers collapsed, vs the spoken-form reference (secondary) | 3.2% | 10.3% |
-| Order-id exact match (after normalisation) | 17/17 (100%) | 5/5 (100%) |
-| Order-id exact match, Whisper text alone (before normalisation) | 17/17 (100%) | 5/5 (100%) |
+| WER, Whisper text vs the typed reference (standard normalisation) | 1.3% | 12.1% |
+| WER with ids and numbers collapsed, vs the spoken-form reference (secondary) | 3.2% | 8.8% |
+| Order-id exact match (after normalisation) | 17/17 (100%) | 4/5 (80%) |
+| Order-id exact match, Whisper text alone (before normalisation) | 17/17 (100%) | 4/5 (80%) |
 | Spoken yes/no read correctly, P6 strict reader | 4/4 (100%) | 2/2 (100%) |
 | Spoken yes/no read correctly, P1 `_typed_answer` | 4/4 (100%) | 2/2 (100%) |
 | Hard-negative spoken answers not taken as yes or no, P6 / P1 | 3/3 (100%) / 3/3 (100%) | - / - |
 | Quiet clips (silence, noise, laughter, babble, keyboard) where Whisper returned no text | 4/5 (80%) | - |
 | Quiet clips producing no agent call (no text, or blocked by the confidence rule) | 5/5 (100%) | - |
-| STT latency p50 / p95 (CPU, int8) | 1.4 s / 1.8 s | 1.5 s / 1.7 s |
-| TTS latency p50 / p95 (piper, CPU, 12 sample replies) | 208 ms / 432 ms | same voice |
+| STT latency p50 / p95 (CPU, int8) | 1.6 s / 1.7 s | 1.6 s / 1.6 s |
+| TTS latency p50 / p95 (piper, CPU, 12 sample replies) | 211 ms / 493 ms | same voice |
 | End-to-end tool + order id correct, typed text (ceiling) | 25/25 (100%) | not run |
 | End-to-end tool + order id correct, voiced | 25/25 (100%) | not run |
 | Real create_ticket calls (typed / voiced), of 2 ticket clips | 2 / 2 | not run |
@@ -29,24 +29,24 @@ STT language setting: `en`. Synthetic clips are piper speech read back by Whispe
 | Scenario voice-unclear | pass | not run |
 | Scenario voice-confirm | pass | not run |
 
-`en` against `auto` on the synthetic clips: `en` wins on speed: same accuracy, `auto` is 1150 ms slower at p50. Order-id matches 17 (`en`) vs 17 (`auto`); `auto` chose: en. All synthetic speech is clear English, so this says nothing about real Hinglish speakers. The default stays `en` because Hindi detection can return Devanagari or a translation, which the agent does not read.
+`en` against `auto` on the synthetic clips: `en` wins on speed: same accuracy, `auto` is 1154 ms slower at p50. Order-id matches 17 (`en`) vs 17 (`auto`); `auto` chose: en. All synthetic speech is clear English, so this says nothing about real Hinglish speakers. The default stays `en` because Hindi detection can return Devanagari or a translation, which the agent does not read.
 
 ## STT language setting: en vs auto (synthetic clips)
 
 | Setting | WER vs typed ref | Order-id exact | Order-id, Whisper text alone | STT p50 | STT p95 | Quiet clips, no agent call |
 |---|---|---|---|---|---|---|
-| `en` | 1.3% | 17/17 (100%) | 17/17 (100%) | 1.4 s | 1.8 s | 5/5 (100%) |
-| `auto` | 1.3% | 17/17 (100%) | 17/17 (100%) | 2.6 s | 2.9 s | 5/5 (100%) |
-| `en-noprompt` | 9.4% | 15/17 (88%) | 9/17 (53%) | 1.2 s | 1.4 s | 5/5 (100%) |
+| `en` | 1.3% | 17/17 (100%) | 17/17 (100%) | 1.6 s | 1.7 s | 5/5 (100%) |
+| `auto` | 1.3% | 17/17 (100%) | 17/17 (100%) | 2.7 s | 3.0 s | 5/5 (100%) |
+| `en-noprompt` | 9.4% | 15/17 (88%) | 9/17 (53%) | 1.3 s | 1.5 s | 5/5 (100%) |
 
-`en` against `auto` on the synthetic clips: `en` wins on speed: same accuracy, `auto` is 1150 ms slower at p50. Order-id matches 17 (`en`) vs 17 (`auto`); `auto` chose: en. All synthetic speech is clear English, so this says nothing about real Hinglish speakers. The default stays `en` because Hindi detection can return Devanagari or a translation, which the agent does not read.
+`en` against `auto` on the synthetic clips: `en` wins on speed: same accuracy, `auto` is 1154 ms slower at p50. Order-id matches 17 (`en`) vs 17 (`auto`); `auto` chose: en. All synthetic speech is clear English, so this says nothing about real Hinglish speakers. The default stays `en` because Hindi detection can return Devanagari or a translation, which the agent does not read.
 
 ## Latency
 
 | Stage | p50 | p95 | Note |
 |---|---|---|---|
-| STT (`en`, small int8, CPU) | 1.4 s | 1.8 s | real-time factor 0.39 (decode, VAD and decode included) |
-| TTS (piper, CPU) | 208 ms | 432 ms | 12 sample replies, real-time factor 0.025 |
+| STT (`en`, small int8, CPU) | 1.6 s | 1.7 s | real-time factor 0.41 (decode, VAD and decode included) |
+| TTS (piper, CPU) | 211 ms | 493 ms | 12 sample replies, real-time factor 0.025 |
 | Agent (P1, GPU) | 12.9 s | 18.0 s | measured in the end-to-end run |
 
 ## Per-clip transcripts (synthetic clips)
@@ -92,16 +92,16 @@ Language `en`. Raw = what Whisper returned; sent = after normalisation (what the
 | S34 | nonspeech | - |  |  |  | - | - | - | - |
 | S35 | nonspeech | - |  | They are worth living up to the number of girls around the world at home. | They are worth living up to the number of girls around the world at home. | - | - | - | -0.99 |
 | S36 | nonspeech | - |  |  |  | - | - | - | - |
-| O01 | query | - | Where is my order LC-1150? | Where is my order LC-1150? | Where is my order LC-1150? | 0% | ok | - | -0.33 |
-| O02 | query | - | Can you check order LC-1015 for me? | Can you check order LC-1015 for me? | Can you check order LC-1015 for me? | 0% | ok | - | -0.28 |
-| O03 | query | - | Has order LC-1050 shipped yet? | Has order LC-1050 shipped yet? | Has order LC-1050 shipped yet? | 0% | ok | - | -0.33 |
-| O04 | query | - | I want to return the grinder from order LC-1144. | I want to return the grinder from LC-1144. | I want to return the grinder from LC-1144. | 7% | ok | - | -0.30 |
-| O05 | query | - | My order LC-1163 arrived damaged, please start a return. | My order LC-1163 arrived damaged. Please start a return. | My order LC-1163 arrived damaged. Please start a return. | 0% | ok | - | -0.38 |
-| O06 | query | - | Is the Hand Burr Grinder Pro in stock? | Is the Hand Burr Grinder Pro in stock? | Is the Hand Burr Grinder Pro in stock? | 0% | - | - | -0.30 |
-| O07 | query | - | I am not happy, I want to speak to a person. | I'm not happy. I want to speak to a person. | I'm not happy. I want to speak to a person. | 18% | - | - | -0.26 |
-| O08 | query | - | How long does shipping take to Hyderabad? | How long does it take to ship to Hyderabad? | How long does it take to ship to Hyderabad? | 43% | - | - | -0.18 |
-| O09 | yes | - | Yes, please go ahead. | Yeah, please go ahead. | Yeah, please go ahead. | 25% | - | yes / yes | -0.35 |
-| O10 | no | - | No, cancel that. | No, cancel that. | No, cancel that. | 0% | - | no / no | -0.35 |
+| O01 | query | - | Where is my order LC-1150? | Where is my order? LC-1150. | Where is my order? LC-1150. | 0% | ok | - | -0.38 |
+| O02 | query | - | Can you check order LC-1015 for me? | Can you check order LC-1015 for me? | Can you check order LC-1015 for me? | 0% | ok | - | -0.36 |
+| O03 | query | - | Has order LC-1050 shipped yet? | Has the order LC-1011050 shipped yet? | Has the order LC-1011050 shipped yet? | 88% | WRONG | - | -0.30 |
+| O04 | query | - | I want to return the grinder from order LC-1153. | I want to return the grinder from order LC-1153. | I want to return the grinder from order LC-1153. | 0% | ok | - | -0.31 |
+| O05 | query | - | My order LC-1163 arrived damaged, please start a return. | My order LC-1163 arrived damaged. Please start a return. | My order LC-1163 arrived damaged. Please start a return. | 0% | ok | - | -0.41 |
+| O06 | query | - | Is the Hand Burr Grinder Pro in stock? | Is the Hand Burr Grinder Pro in stock? | Is the Hand Burr Grinder Pro in stock? | 0% | - | - | -0.41 |
+| O07 | query | - | I am not happy, I want to speak to a person. | I'm not happy. I want to speak to a person. | I'm not happy. I want to speak to a person. | 18% | - | - | -0.31 |
+| O08 | query | - | How long does shipping take to Hyderabad? | How long does shipping take to Hyderabad usually? | How long does shipping take to Hyderabad usually? | 14% | - | - | -0.35 |
+| O09 | yes | - | Yes, please go ahead. | Yeah, please go ahead. | Yeah, please go ahead. | 25% | - | yes / yes | -0.32 |
+| O10 | no | - | No, cancel that. | No. Cancel that. | No. Cancel that. | 0% | - | no / no | -0.39 |
 
 ## Yes/no readers
 

@@ -1,0 +1,286 @@
+[en] S01   1419 ms  'Where is my order LC-1150?' -> 'Where is my order LC-1150?'
+[en] S02   1647 ms  'Where is my order LC-1015?' -> 'Where is my order LC-1015?'
+[en] S03   1659 ms  'Can you check LC-1150 for me please?' -> 'Can you check LC-1150 for me please?'
+[en] S04   1553 ms  'What is the status of LC-1050?' -> 'What is the status of LC-1050?'
+[en] S05   1491 ms  'Has LC-1115 been shipped yet?' -> 'Has LC-1115 been shipped yet?'
+[en] S06   1694 ms  'I placed order LC-1015 last week and nothing has come.' -> 'I placed order LC-1015 last week and nothing has come.'
+[en] S07   1422 ms  'Please track LC-1167.' -> 'Please track LC-1167.'
+[en] S08   1667 ms  'Order LC-1001, when will it be delivered?' -> 'Order LC-1001, when will it be delivered?'
+[en] S09   1570 ms  'My order number is LC-1125.' -> 'My order number is LC-1125.'
+[en] S10   1573 ms  'LC-1200, where is the parcel?' -> 'LC-1200, where is the parcel?'
+[en] S11   1534 ms  'Please look up LC-1107.' -> 'Please look up LC-1107.'
+[en] S12   1542 ms  'Is Order LC-1109 delivered?' -> 'Is Order LC-1109 delivered?'
+[en] S13   1564 ms  'Order LC-1188 has not arrived.' -> 'Order LC-1188 has not arrived.'
+[en] S14   1649 ms  'I want to return the kettle from Order LC-1137, it stopped heating.' -> 'I want to return the kettle from Order LC-1137, it stopped heating.'
+[en] S15   1672 ms  'The coffee beans from order LC-1155 arrive damaged. I want to return them.' -> 'The coffee beans from order LC-1155 arrive damaged. I want to return them.'
+[en] S16   1615 ms  'Please start a return for order LC-1161. The Moka Pot is leaking.' -> 'Please start a return for order LC-1161. The Moka Pot is leaking.'
+[en] S37   1723 ms  'I want to return the Grinder from Order LC-1154, I changed my mind.' -> 'I want to return the Grinder from Order LC-1154, I changed my mind.'
+[en] S17   1612 ms  'Do you have the Larkfield Hand Burr Grinder Pro in stock?' -> 'Do you have the Larkfield Hand Burr Grinder Pro in stock?'
+[en] S18   1568 ms  'Is the Espresso Grinder 64mm available?' -> 'Is the Espresso Grinder 64mm available?'
+[en] S19   1550 ms  'How long does shipping take to Hyderabad?' -> 'How long does shipping take to Hyderabad?'
+[en] S20   1565 ms  'What is your return policy for coffee beans?' -> 'What is your return policy for coffee beans?'
+[en] S21   1633 ms  'How long is the warranty on the Electric Burr Grinder?' -> 'How long is the warranty on the Electric Burr Grinder?'
+[en] S22   1575 ms  'How do I cancel my coffee subscription?' -> 'How do I cancel my coffee subscription?'
+[en] S23   1624 ms  "I'm very unhappy and I want to speak to a person." -> "I'm very unhappy and I want to speak to a person."
+[en] S24   1617 ms  'Please raise a ticket, my invoice has the wrong address.' -> 'Please raise a ticket, my invoice has the wrong address.'
+[en] S25   1466 ms  'Yes, please go ahead.' -> 'Yes, please go ahead.'
+[en] S26   1448 ms  'Yeah, sure, do it.' -> 'Yeah, sure, do it.'
+[en] S27   1432 ms  'No, cancel that.' -> 'No, cancel that.'
+[en] S28   1468 ms  'No thanks. I will keep it.' -> 'No thanks. I will keep it.'
+[en] S31   1400 ms  'Yo, no.' -> 'Yo, no.'
+[en] S32   1303 ms  'Okay, bye.' -> 'Okay, bye.'
+[en] S33   1401 ms  "Yes please, don't." -> "Yes please, don't."
+[en] S29     11 ms  '' -> ''
+[en] S30      8 ms  '' -> ''
+[en] S34      6 ms  '' -> ''
+[en] S35   1709 ms  'They are worth living up to the number of girls around the world at home.' -> 'They are worth living up to the number of girls around the world at home.'
+[en] S36     10 ms  '' -> ''
+[en] O01   1590 ms  'Where is my order? LC-1150.' -> 'Where is my order? LC-1150.'
+[en] O02   1492 ms  'Can you check order LC-1015 for me?' -> 'Can you check order LC-1015 for me?'
+[en] O03   1566 ms  'Has the order LC-1011050 shipped yet?' -> 'Has the order LC-1011050 shipped yet?'
+[en] O04   1619 ms  'I want to return the grinder from order LC-1153.' -> 'I want to return the grinder from order LC-1153.'
+[en] O05   1592 ms  'My order LC-1163 arrived damaged. Please start a return.' -> 'My order LC-1163 arrived damaged. Please start a return.'
+[en] O06   1580 ms  'Is the Hand Burr Grinder Pro in stock?' -> 'Is the Hand Burr Grinder Pro in stock?'
+[en] O07   1562 ms  "I'm not happy. I want to speak to a person." -> "I'm not happy. I want to speak to a person."
+[en] O08   1619 ms  'How long does shipping take to Hyderabad usually?' -> 'How long does shipping take to Hyderabad usually?'
+[en] O09   1418 ms  'Yeah, please go ahead.' -> 'Yeah, please go ahead.'
+[en] O10   1443 ms  'No. Cancel that.' -> 'No. Cancel that.'
+[auto] S01   2806 ms  'Where is my order LC-1150?' -> 'Where is my order LC-1150?'
+[auto] S02   2718 ms  'Where is my order LC-1015?' -> 'Where is my order LC-1015?'
+[auto] S03   2736 ms  'Can you check LC-1150 for me please?' -> 'Can you check LC-1150 for me please?'
+[auto] S04   2652 ms  'What is the status of LC-1050?' -> 'What is the status of LC-1050?'
+[auto] S05   2644 ms  'Has LC-1115 been shipped yet?' -> 'Has LC-1115 been shipped yet?'
+[auto] S06   2835 ms  'I placed order LC-1015 last week and nothing has come.' -> 'I placed order LC-1015 last week and nothing has come.'
+[auto] S07   2543 ms  'Please track LC-1167.' -> 'Please track LC-1167.'
+[auto] S08   2851 ms  'Order LC-1001, when will it be delivered?' -> 'Order LC-1001, when will it be delivered?'
+[auto] S09   2762 ms  'My order number is LC-1125.' -> 'My order number is LC-1125.'
+[auto] S10   2778 ms  'LC-1200, where is the parcel?' -> 'LC-1200, where is the parcel?'
+[auto] S11   2694 ms  'Please look up LC-1107.' -> 'Please look up LC-1107.'
+[auto] S12   2736 ms  'Is Order LC-1109 delivered?' -> 'Is Order LC-1109 delivered?'
+[auto] S13   2806 ms  'Order LC-1188 has not arrived.' -> 'Order LC-1188 has not arrived.'
+[auto] S14   2988 ms  'I want to return the kettle from Order LC-1137, it stopped heating.' -> 'I want to return the kettle from Order LC-1137, it stopped heating.'
+[auto] S15   3044 ms  'The coffee beans from order LC-1155 arrive damaged. I want to return them.' -> 'The coffee beans from order LC-1155 arrive damaged. I want to return them.'
+[auto] S16   2983 ms  'Please start a return for order LC-1161. The Moka Pot is leaking.' -> 'Please start a return for order LC-1161. The Moka Pot is leaking.'
+[auto] S37   3036 ms  'I want to return the Grinder from Order LC-1154, I changed my mind.' -> 'I want to return the Grinder from Order LC-1154, I changed my mind.'
+[auto] S17   2876 ms  'Do you have the Larkfield Hand Burr Grinder Pro in stock?' -> 'Do you have the Larkfield Hand Burr Grinder Pro in stock?'
+[auto] S18   2810 ms  'Is the Espresso Grinder 64mm available?' -> 'Is the Espresso Grinder 64mm available?'
+[auto] S19   2764 ms  'How long does shipping take to Hyderabad?' -> 'How long does shipping take to Hyderabad?'
+[auto] S20   2672 ms  'What is your return policy for coffee beans?' -> 'What is your return policy for coffee beans?'
+[auto] S21   2780 ms  'How long is the warranty on the Electric Burr Grinder?' -> 'How long is the warranty on the Electric Burr Grinder?'
+[auto] S22   2622 ms  'How do I cancel my coffee subscription?' -> 'How do I cancel my coffee subscription?'
+[auto] S23   2653 ms  "I'm very unhappy and I want to speak to a person." -> "I'm very unhappy and I want to speak to a person."
+[auto] S24   2741 ms  'Please raise a ticket, my invoice has the wrong address.' -> 'Please raise a ticket, my invoice has the wrong address.'
+[auto] S25   2488 ms  'Yes, please go ahead.' -> 'Yes, please go ahead.'
+[auto] S26   2513 ms  'Yeah, sure, do it.' -> 'Yeah, sure, do it.'
+[auto] S27   2477 ms  'No, cancel that.' -> 'No, cancel that.'
+[auto] S28   2499 ms  'No thanks. I will keep it.' -> 'No thanks. I will keep it.'
+[auto] S31   2445 ms  'Yo, no.' -> 'Yo, no.'
+[auto] S32   2463 ms  'Okay, bye.' -> 'Okay, bye.'
+[auto] S33   2503 ms  "Yes please, don't." -> "Yes please, don't."
+[auto] S29      7 ms  '' -> ''
+[auto] S30     11 ms  '' -> ''
+[auto] S34      8 ms  '' -> ''
+[auto] S35   2828 ms  'They are worth living up to the number of girls around the world at home.' -> 'They are worth living up to the number of girls around the world at home.'
+[auto] S36      8 ms  '' -> ''
+[auto] O01   2637 ms  'Where is my order? LC-1150.' -> 'Where is my order? LC-1150.'
+[auto] O02   2754 ms  'Can you check order LC-1015 for me?' -> 'Can you check order LC-1015 for me?'
+[auto] O03   2821 ms  'Has the order LC-1011050 shipped yet?' -> 'Has the order LC-1011050 shipped yet?'
+[auto] O04   2792 ms  'I want to return the grinder from order LC-1153.' -> 'I want to return the grinder from order LC-1153.'
+[auto] O05   2712 ms  'My order LC-1163 arrived damaged. Please start a return.' -> 'My order LC-1163 arrived damaged. Please start a return.'
+[auto] O06   2702 ms  'Is the Hand Burr Grinder Pro in stock?' -> 'Is the Hand Burr Grinder Pro in stock?'
+[auto] O07   2644 ms  "I'm not happy. I want to speak to a person." -> "I'm not happy. I want to speak to a person."
+[auto] O08   2657 ms  'How long does shipping take to Hyderabad usually?' -> 'How long does shipping take to Hyderabad usually?'
+[auto] O09   2464 ms  'Yeah, please go ahead.' -> 'Yeah, please go ahead.'
+[auto] O10   2459 ms  'No. Cancel that.' -> 'No. Cancel that.'
+[en-noprompt] S01   1286 ms  'Where is my order LC-115-0?' -> 'Where is my order LC-1150?'
+[en-noprompt] S02   1244 ms  'Where is my order LC1015?' -> 'Where is my order LC-1015?'
+[en-noprompt] S03   1275 ms  'Can you check LCL 1150 for me please?' -> 'Can you check LCL 1150 for me please?'
+[en-noprompt] S04   1229 ms  'What is the status of LC-1050?' -> 'What is the status of LC-1050?'
+[en-noprompt] S05   1221 ms  'Has LC-1115 been shipped yet?' -> 'Has LC-1115 been shipped yet?'
+[en-noprompt] S06   1401 ms  'I placed order LC-1015 last week and nothing has come.' -> 'I placed order LC-1015 last week and nothing has come.'
+[en-noprompt] S07   1237 ms  'Please track LC-1167.' -> 'Please track LC-1167.'
+[en-noprompt] S08   1281 ms  'Order LC-10-01, when will it be delivered?' -> 'Order LC-1001, when will it be delivered?'
+[en-noprompt] S09   1329 ms  'My order number is LC 1125.' -> 'My order number is LC-1125.'
+[en-noprompt] S10   1302 ms  'LC-1200, where is the parcel?' -> 'LC-1200, where is the parcel?'
+[en-noprompt] S11   1388 ms  'Please look up LC1107.' -> 'Please look up LC-1107.'
+[en-noprompt] S12   1335 ms  'Is order LC-1109 delivered?' -> 'Is order LC-1109 delivered?'
+[en-noprompt] S13   1371 ms  'Order LC-118-8 has not arrived.' -> 'Order LC-1188 has not arrived.'
+[en-noprompt] S14   1446 ms  'I want to return the kettle from order LC-1137, it stopped heating.' -> 'I want to return the kettle from order LC-1137, it stopped heating.'
+[en-noprompt] S15   1494 ms  'The coffee beans from Orderal C-1155 arrive damaged. I want to return them' -> 'The coffee beans from Orderal C-1155 arrive damaged. I want to return them'
+[en-noprompt] S16   1490 ms  'Please start a return for order LC-1161, the Mocha Pot is leaking.' -> 'Please start a return for order LC-1161, the Mocha Pot is leaking.'
+[en-noprompt] S37   1459 ms  'I want to return the grinder from order LC-1154, I changed my mind.' -> 'I want to return the grinder from order LC-1154, I changed my mind.'
+[en-noprompt] S17   1418 ms  'Do you have the Larkfield hand Bergrinder pro in stock?' -> 'Do you have the Larkfield hand Bergrinder pro in stock?'
+[en-noprompt] S18   1399 ms  'Is the Espresso Grinder 64mm available?' -> 'Is the Espresso Grinder 64mm available?'
+[en-noprompt] S19   1357 ms  'How long does shipping take to Hyderabad?' -> 'How long does shipping take to Hyderabad?'
+[en-noprompt] S20   1329 ms  'What is your return policy for coffee beans?' -> 'What is your return policy for coffee beans?'
+[en-noprompt] S21   1367 ms  'How long is the warranty on the electric burr grinder?' -> 'How long is the warranty on the electric burr grinder?'
+[en-noprompt] S22   1308 ms  'How do I cancel my coffee subscription?' -> 'How do I cancel my coffee subscription?'
+[en-noprompt] S23   1346 ms  "I'm very unhappy and I want to speak to a person." -> "I'm very unhappy and I want to speak to a person."
+[en-noprompt] S24   1332 ms  'Please raise a ticket. My invoice has the wrong address' -> 'Please raise a ticket. My invoice has the wrong address'
+[en-noprompt] S25   1215 ms  'Yes, please go ahead.' -> 'Yes, please go ahead.'
+[en-noprompt] S26   1214 ms  'Yeah, sure do it' -> 'Yeah, sure do it'
+[en-noprompt] S27   1236 ms  'No, cancel that.' -> 'No, cancel that.'
+[en-noprompt] S28   1244 ms  'No thanks, I will keep it.' -> 'No thanks, I will keep it.'
+[en-noprompt] S31   1181 ms  'Yeah, no' -> 'Yeah, no'
+[en-noprompt] S32   1188 ms  'Okay, bye.' -> 'Okay, bye.'
+[en-noprompt] S33   1246 ms  "Yes please, don't." -> "Yes please, don't."
+[en-noprompt] S29      9 ms  '' -> ''
+[en-noprompt] S30      7 ms  '' -> ''
+[en-noprompt] S34      7 ms  '' -> ''
+[en-noprompt] S35   9173 ms  'They are worth living up to the number of girls around the world at home.' -> 'They are worth living up to the number of girls around the world at home.'
+[en-noprompt] S36      9 ms  '' -> ''
+[en-noprompt] O01   1300 ms  'Where is my order? LC 1150' -> 'Where is my order? LC-1150'
+[en-noprompt] O02   1296 ms  'Can you check order LC1015 for me?' -> 'Can you check order LC-1015 for me?'
+[en-noprompt] O03   1292 ms  'Has the order LC 1011050 shipped yet?' -> 'Has the order LC-1011050 shipped yet?'
+[en-noprompt] O04   1197 ms  'I want to return the grinder from order LC1153' -> 'I want to return the grinder from order LC-1153'
+[en-noprompt] O05   1145 ms  'My order LC 1163 arrived damaged. Please start a return' -> 'My order LC-1163 arrived damaged. Please start a return'
+[en-noprompt] O06   1142 ms  'Is the Hanberg grinder pro in stock?' -> 'Is the Hanberg grinder pro in stock?'
+[en-noprompt] O07   1126 ms  "I'm not happy. I want to speak to a person." -> "I'm not happy. I want to speak to a person."
+[en-noprompt] O08   1137 ms  'How long does shipping take to Hyderabad usually?' -> 'How long does shipping take to Hyderabad usually?'
+[en-noprompt] O09   1072 ms  'Yeah, please go ahead' -> 'Yeah, please go ahead'
+[en-noprompt] O10   1062 ms  'No. Cancel that.' -> 'No. Cancel that.'
+[cal] S25 snr=  5 'Yes, please go ahead.' lp=-0.29865241050720215 ns=0.05
+[cal] S25 snr=  0 'Yes, please go ahead.' lp=-0.28608110215928817 ns=0.05
+[cal] S25 snr= -5 'Yes, please go ahead.' lp=-0.27241947915818954 ns=0.14
+[cal] S26 snr=  5 'Yeah, sure, do it.' lp=-0.368033891916275 ns=0.06
+[cal] S26 snr=  0 'Yeah, sure, do it.' lp=-0.5543827772140503 ns=0.09
+[cal] S26 snr= -5 'Yes, sure.' lp=-0.6670021329607282 ns=0.16
+[cal] S27 snr=  5 'No, cancel that.' lp=-0.3362894058227539 ns=0.02
+[cal] S27 snr=  0 'No, cancel that.' lp=-0.4012828357517719 ns=0.07
+[cal] S27 snr= -5 'No, cancel that.' lp=-0.31460851803421974 ns=0.07
+[cal] S28 snr=  5 'No thanks, I will keep it.' lp=-0.24273604154586792 ns=0.03
+[cal] S28 snr=  0 'No thanks. I will keep it.' lp=-0.22801808335564352 ns=0.04
+[cal] S28 snr= -5 'No thanks, I will keep.' lp=-0.4397442787885666 ns=0.12
+en {
+ "own": {
+  "clips": 10,
+  "wer_typed": 0.12087912087912088,
+  "wer_raw": 0.12087912087912088,
+  "wer_norm": 0.08823529411764706,
+  "id_exact": 4,
+  "id_total": 5,
+  "id_raw_exact": 4,
+  "yn_ok": 2,
+  "yn_total": 2,
+  "yn_ok_p1": 2,
+  "hardneg_ok": 0,
+  "hardneg_total": 0,
+  "hardneg_ok_p1": 0,
+  "quiet_ok": 0,
+  "quiet_total": 0,
+  "quiet_blocked": 0,
+  "stt_ms_p50": 1573.0,
+  "stt_ms_p95": 1619.0,
+  "stt_rtf": 0.2706468531468531
+ },
+ "synthetic": {
+  "clips": 37,
+  "wer_typed": 0.013377926421404682,
+  "wer_raw": 0.2837370242214533,
+  "wer_norm": 0.03211009174311927,
+  "id_exact": 17,
+  "id_total": 17,
+  "id_raw_exact": 17,
+  "yn_ok": 4,
+  "yn_total": 4,
+  "yn_ok_p1": 4,
+  "hardneg_ok": 3,
+  "hardneg_total": 3,
+  "hardneg_ok_p1": 3,
+  "quiet_ok": 4,
+  "quiet_total": 5,
+  "quiet_blocked": 5,
+  "stt_ms_p50": 1564.0,
+  "stt_ms_p95": 1697.0,
+  "stt_rtf": 0.4058108321490605
+ }
+}
+auto {
+ "own": {
+  "clips": 10,
+  "wer_typed": 0.12087912087912088,
+  "wer_raw": 0.12087912087912088,
+  "wer_norm": 0.08823529411764706,
+  "id_exact": 4,
+  "id_total": 5,
+  "id_raw_exact": 4,
+  "yn_ok": 2,
+  "yn_total": 2,
+  "yn_ok_p1": 2,
+  "hardneg_ok": 0,
+  "hardneg_total": 0,
+  "hardneg_ok_p1": 0,
+  "quiet_ok": 0,
+  "quiet_total": 0,
+  "quiet_blocked": 0,
+  "stt_ms_p50": 2679.5,
+  "stt_ms_p95": 2807.95,
+  "stt_rtf": 0.4657692307692307
+ },
+ "synthetic": {
+  "clips": 37,
+  "wer_typed": 0.013377926421404682,
+  "wer_raw": 0.2837370242214533,
+  "wer_norm": 0.03211009174311927,
+  "id_exact": 17,
+  "id_total": 17,
+  "id_raw_exact": 17,
+  "yn_ok": 4,
+  "yn_total": 4,
+  "yn_ok_p1": 4,
+  "hardneg_ok": 3,
+  "hardneg_total": 3,
+  "hardneg_ok_p1": 3,
+  "quiet_ok": 4,
+  "quiet_total": 5,
+  "quiet_blocked": 5,
+  "stt_ms_p50": 2718.0,
+  "stt_ms_p95": 2997.6000000000004,
+  "stt_rtf": 0.7088267803568609
+ }
+}
+en-noprompt {
+ "own": {
+  "clips": 10,
+  "wer_typed": 0.26373626373626374,
+  "wer_raw": 0.26373626373626374,
+  "wer_norm": 0.11764705882352941,
+  "id_exact": 4,
+  "id_total": 5,
+  "id_raw_exact": 0,
+  "yn_ok": 2,
+  "yn_total": 2,
+  "yn_ok_p1": 2,
+  "hardneg_ok": 0,
+  "hardneg_total": 0,
+  "hardneg_ok_p1": 0,
+  "quiet_ok": 0,
+  "quiet_total": 0,
+  "quiet_blocked": 0,
+  "stt_ms_p50": 1143.5,
+  "stt_ms_p95": 1298.2,
+  "stt_rtf": 0.20575174825174825
+ },
+ "synthetic": {
+  "clips": 37,
+  "wer_typed": 0.09364548494983277,
+  "wer_raw": 0.29411764705882354,
+  "wer_norm": 0.10550458715596331,
+  "id_exact": 15,
+  "id_total": 17,
+  "id_raw_exact": 9,
+  "yn_ok": 4,
+  "yn_total": 4,
+  "yn_ok_p1": 4,
+  "hardneg_ok": 3,
+  "hardneg_total": 3,
+  "hardneg_ok_p1": 3,
+  "quiet_ok": 4,
+  "quiet_total": 5,
+  "quiet_blocked": 5,
+  "stt_ms_p50": 1302.0,
+  "stt_ms_p95": 1490.8,
+  "stt_rtf": 0.4055976630348966
+ }
+}
+tts {'n': 12, 'ms_p50': 211.34399995207787, 'ms_p95': 493.19704500376224, 'rtf_p50': 0.02526075176969127}

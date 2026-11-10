@@ -43,7 +43,7 @@ Larkfield Coffee Co. is fictional and all data is synthetic. Numbers below come 
 
 - 338 unit and API tests with the agent mocked: normalisation of about 110 spoken forms, the yes/no reader with 35 hard negatives, speakable text, WER, pipeline rules, decoder limits, body caps, eval scoring, plus one test that runs the real models on a clip.
 - 37 synthetic clips (piper, different speaking rates, six with added room noise): 25 questions including confusable ids (LC-1150 against LC-1015, LC-1050, LC-1115), 4 yes/no answers, 3 hard-negative answers ("Yeah, no", "Okay, bye", "Yes please, don't"), and 5 quiet clips (silence, room noise, laughter-like bursts, reversed-speech babble, keyboard clicks). Synthetic speech read back by Whisper is a best case: it checks the pipeline, not real-world accuracy.
-- 10 own-voice prompts, recorded 2026-11-10 with `python -m evals.record`: 7/8 end to end (the miss was bad case data, see README), ids and yes/no all heard right. One speaker; O04 needs re-recording.
+- 10 own-voice prompts, recorded with `python -m evals.record` (run 1 2026-11-10, all re-recorded 2026-11-11 for run 2): 7/8 spoken end to end both times. Run 1's miss was bad case data (fixed); run 2's was one misheard order id, flagged and asked again. One speaker.
 - End to end against project 1, run by the orchestrator: every query clip as typed text and as voice, each scored against the clip label (tool plus order id); quiet clips must cause no call; voice cancel (LC-1137), a voiced "Yeah, no" that must not be sent (LC-1154), and voice confirm (LC-1161, the only write). Return clips are matched to project 1's order data (delivered within 30 days, the named item present). Status: run 1 failed on test data (section 4); run 2 typed 22/25, voiced 23/25; run 3 typed 25/25, voiced 25/25, all three scenarios pass.
 
 ## 4. Findings so far
@@ -61,8 +61,8 @@ All numbers: `evals/report.md`, synthetic clips (optimistic), CPU.
 | Quiet clips that reach the agent | 0/5 (the babble clip became a fluent sentence at avg logprob -0.99; clean questions score -0.39 or better) |
 | Spoken yes/no read correctly, P6 reader and project 1 `_typed_answer` | 4/4 each |
 | Hard-negative spoken answers not taken as yes or no | 3/3 each |
-| STT p50 / p95 | 1.4 s / 1.8 s for 3 to 6 s clips (synthetic); 1.5 s / 1.7 s on own voice |
-| TTS p50 / p95 | 0.2 s / 0.4 s |
+| STT p50 / p95 | 1.6 s / 1.7 s for 3 to 6 s clips (synthetic); 1.6 s / 1.6 s on own voice (2026-11-11 run) |
+| TTS p50 / p95 | 0.2 s / 0.5 s |
 | `auto` against `en` | Same accuracy on clear English, slower: `en` is the default |
 
 **End-to-end run 1 (2026-11-10) failed on test data, not on code.** Typed 21/24 and voiced 21/24; the quiet clips and both ticket clips passed; all three voice scenarios failed. Every failure was a return clip that did not match project 1's order data: a kettle from LC-1144 (an order of one House Blend bag), a grinder from LC-1199 (two Press Brewers, status placed, not delivered) and coffee beans from LC-1163 (a scale and two pour-over sets). Project 1 refused each one, and its refusal ("there is no kettle in this order") was the correct behaviour. The clips were rebuilt on orders checked against `data/orders.json`: LC-1137 (kettle that stopped heating), LC-1154 (grinder, change of mind), LC-1155 (damaged beans) and LC-1161 (leaking moka pot), with a unit test that re-checks them. Run 1 is kept as `evals/results/e2e-run1.json`.

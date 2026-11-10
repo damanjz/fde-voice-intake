@@ -1,0 +1,111 @@
+S01 typed=True voiced=True 'Where is my order LC-1150?' tools=['lookup_order']
+S02 typed=True voiced=True 'Where is my order LC-1015?' tools=['lookup_order']
+S03 typed=True voiced=True 'Can you check LC-1150 for me please?' tools=['lookup_order']
+S04 typed=True voiced=True 'What is the status of LC-1050?' tools=['lookup_order']
+S05 typed=True voiced=True 'Has LC-1115 been shipped yet?' tools=['lookup_order']
+S06 typed=True voiced=True 'I placed order LC-1015 last week and nothing has come.' tools=['lookup_order', 'create_ticket']
+S07 typed=True voiced=True 'Please track LC-1167.' tools=['lookup_order']
+S08 typed=True voiced=True 'Order LC-1001, when will it be delivered?' tools=['lookup_order']
+S09 typed=True voiced=True 'My order number is LC-1125.' tools=['lookup_order']
+S10 typed=True voiced=True 'LC-1200, where is the parcel?' tools=['lookup_order']
+S11 typed=True voiced=True 'Please look up LC-1107.' tools=['lookup_order']
+S12 typed=True voiced=True 'Is Order LC-1109 delivered?' tools=['lookup_order']
+S13 typed=True voiced=True 'Order LC-1188 has not arrived.' tools=['lookup_order']
+S14 typed=True voiced=True 'I want to return the kettle from Order LC-1137, it stopped heating.' tools=['lookup_order', 'start_return']
+S15 typed=True voiced=True 'The coffee beans from order LC-1155 arrive damaged. I want to return them.' tools=['lookup_order', 'start_return']
+S16 typed=True voiced=True 'Please start a return for order LC-1161. The Moka Pot is leaking.' tools=['lookup_order', 'start_return']
+S37 typed=True voiced=True 'I want to return the Grinder from Order LC-1154, I changed my mind.' tools=['lookup_order', 'start_return']
+S17 typed=True voiced=True 'Do you have the Larkfield Hand Burr Grinder Pro in stock?' tools=['check_stock']
+S18 typed=True voiced=True 'Is the Espresso Grinder 64mm available?' tools=['check_stock']
+S19 typed=True voiced=True 'How long does shipping take to Hyderabad?' tools=[]
+S20 typed=True voiced=True 'What is your return policy for coffee beans?' tools=[]
+S21 typed=True voiced=True 'How long is the warranty on the Electric Burr Grinder?' tools=[]
+S22 typed=True voiced=True 'How do I cancel my coffee subscription?' tools=[]
+S23 typed=True voiced=True "I'm very unhappy and I want to speak to a person." tools=['create_ticket']
+S24 typed=True voiced=True 'Please raise a ticket, my invoice has the wrong address.' tools=['create_ticket']
+O01 typed=True voiced=True 'Where is my order? LC-1150.' tools=['lookup_order']
+O02 typed=True voiced=True 'Can you check order LC-1015 for me?' tools=['lookup_order']
+O03 typed=True voiced=False 'Has the order LC-1011050 shipped yet?' tools=['lookup_order']
+O04 typed=True voiced=True 'I want to return the grinder from order LC-1153.' tools=['lookup_order', 'start_return']
+O05 typed=True voiced=True 'My order LC-1163 arrived damaged. Please start a return.' tools=['lookup_order', 'start_return']
+O06 typed=True voiced=True 'Is the Hand Burr Grinder Pro in stock?' tools=['check_stock']
+O07 typed=True voiced=True "I'm not happy. I want to speak to a person." tools=['create_ticket']
+O08 typed=True voiced=True 'How long does shipping take to Hyderabad usually?' tools=[]
+quiet {'id': 'S29', 'kind': 'silent', 'status': 'no_speech', 'transcript_raw': '', 'agent_calls': 0, 'ok': True}
+quiet {'id': 'S30', 'kind': 'noise', 'status': 'no_speech', 'transcript_raw': '', 'agent_calls': 0, 'ok': True}
+quiet {'id': 'S34', 'kind': 'nonspeech', 'status': 'no_speech', 'transcript_raw': '', 'agent_calls': 0, 'ok': True}
+quiet {'id': 'S35', 'kind': 'nonspeech', 'status': 'low_confidence', 'transcript_raw': 'They are worth living up to the number of girls around the world at home.', 'agent_calls': 0, 'ok': True}
+quiet {'id': 'S36', 'kind': 'nonspeech', 'status': 'no_speech', 'transcript_raw': '', 'agent_calls': 0, 'ok': True}
+scenario {"name": "voice-cancel", "expect": "cancel", "request_clip": "S14", "answer_clip": "S27", "request_transcript": "I want to return the kettle from Order LC-1137, it stopped heating.", "pending_after_request": true, "request_order": "LC-1137", "answer_status": "ok", "answer_transcript": "No, cancel that.", "answer_confidence": {"avg_logprob": -0.254, "no_speech_prob": 0.003, "audio_seconds": 2.09}, "pending_after_answer": false, "executed": [], "reply": "Okay, I've cancelled that. Nothing was changed. Is there anything else I can help with?", "ok": true}
+scenario {"name": "voice-unclear", "expect": "unclear", "request_clip": "S37", "answer_clip": "S31", "request_transcript": "I want to return the Grinder from Order LC-1154, I changed my mind.", "pending_after_request": true, "request_order": "LC-1154", "answer_status": "unclear_answer", "answer_transcript": "Yo, no.", "answer_confidence": {"avg_logprob": -0.763, "no_speech_prob": 0.032, "audio_seconds": 1.59}, "pending_after_answer": true, "executed": [], "reply": "Please say yes or no, or press Confirm or Cancel.", "agent_calls_for_answer": 0, "ok": true}
+scenario {"name": "voice-confirm", "expect": "execute", "request_clip": "S16", "answer_clip": "S25", "request_transcript": "Please start a return for order LC-1161. The Moka Pot is leaking.", "pending_after_request": true, "request_order": null, "answer_status": "ok", "answer_transcript": "Yes, please go ahead.", "answer_confidence": {"avg_logprob": -0.3, "no_speech_prob": 0.004, "audio_seconds": 2.38}, "pending_after_answer": false, "executed": ["create_ticket"], "reply": "I've raised ticket T-1020 for our team to review. They'll look into the leaking Moka Pot and the existing return request.", "ok": true}
+{
+ "own": {
+  "n": 8,
+  "typed_ok": 8,
+  "voiced_ok": 7,
+  "id_n": 5,
+  "id_typed_ok": 5,
+  "id_voiced_ok": 4,
+  "ticket_n": 1,
+  "ticket_typed_ok": 1,
+  "ticket_voiced_ok": 1,
+  "handoff_only_typed": 0,
+  "handoff_only_voiced": 0,
+  "wrong_order_voiced": 1,
+  "wrong_order_typed": 0,
+  "agent_ms_voiced": [
+   18964,
+   18861,
+   18428,
+   25368,
+   23676,
+   13155,
+   15870,
+   10486
+  ]
+ },
+ "synthetic": {
+  "n": 25,
+  "typed_ok": 25,
+  "voiced_ok": 25,
+  "id_n": 17,
+  "id_typed_ok": 17,
+  "id_voiced_ok": 17,
+  "ticket_n": 2,
+  "ticket_typed_ok": 2,
+  "ticket_voiced_ok": 2,
+  "handoff_only_typed": 0,
+  "handoff_only_voiced": 0,
+  "wrong_order_voiced": 0,
+  "wrong_order_typed": 0,
+  "agent_ms_voiced": [
+   24479,
+   22793,
+   28097,
+   22215,
+   17942,
+   38003,
+   19291,
+   21481,
+   23459,
+   16777,
+   41097,
+   16489,
+   26794,
+   29665,
+   27942,
+   29020,
+   26774,
+   14262,
+   18809,
+   8976,
+   15955,
+   8841,
+   21033,
+   14944,
+   11243
+  ]
+ }
+}
+done: now run `python -m evals.report`
